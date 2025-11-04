@@ -29,7 +29,8 @@ jobs:
     # https://gh.io/recommended-hardware-resources-for-running-codeql
     # https://gh.io/supported-runners-and-hardware-resources
     # https://gh.io/using-larger-runners
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 
+      'ubuntu-latest' }}
 
     permissions:
       # required for all workflows
@@ -82,7 +83,8 @@ jobs:
         shell: bash
         run: |
           echo 'If you are using a "manual" build mode for one or more of the' \
-            'languages you are analyzing, replace this with the commands to build' \
+            'languages you are analyzing, replace this with the commands to build'
+            \
             'your code, for example:'
           echo '  make bootstrap'
           echo '  make release'
